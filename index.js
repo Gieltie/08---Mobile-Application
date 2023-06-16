@@ -15,9 +15,7 @@ const shoppingListEl = document.getElementById('shopping-list')
 
 addButtonEl.addEventListener("click", function() {
     let inputValue = inputFieldEl.value
-    
     push(shoppingListInDB, inputValue)
-
     clearInputFieldEl()
 })
 
@@ -27,9 +25,6 @@ onValue(shoppingListInDB, function(snapshot) {
         clearShoppingListEl()
         for (let i = 0; i < itemsArray.length; i++) {
             let currentItem = itemsArray[i]
-            //let currentItemID = currentItem[0]
-            //let currentItemValue = currentItem[1]
-            
             appendItemToShoppingListEl(currentItem)
         }    
     } else {
